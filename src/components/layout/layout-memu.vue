@@ -2,22 +2,52 @@
   <div class="layout" :class="{'layout-hide-text': spanLeft < 5}">
     <Row type="flex">
       <Col :span="spanLeft" class="layout-menu-left">
-      <Menu active-name="1" theme="dark" width="auto">
+      <Menu active-name="1-2" theme="dark" width="auto" :open-names="['1']">
         <div class="layout-logo-left"></div>
-        <MenuItem name="1">
-          <Icon type="ios-navigate" :size="iconSize"></Icon>
-          <router-link to="/dataTest" class="layout-text">选项 1</router-link>
-          <!--<span class="layout-text">选项 1</span>-->
-        </MenuItem>
-        <MenuItem name="2">
-          <Icon type="ios-keypad" :size="iconSize"></Icon>
-          <span class="layout-text">选项 2</span>
-        </MenuItem>
-        <MenuItem name="3">
-          <Icon type="ios-analytics" :size="iconSize"></Icon>
-          <span class="layout-text">选项 3</span>
-        </MenuItem>
+        <Submenu name="1">
+          <template slot="title">
+            <Icon type="ios-navigate" :size="iconSize"></Icon>
+            <span class="layout-text">导航1</span>
+          </template>
+          <MenuItem name="1-1" class="layout-text">
+            <router-link to="/dataTest">选项 1</router-link>
+          </MenuItem>
+          <MenuItem name="1-2">选项 2</MenuItem>
+          <MenuItem name="1-3">选项 3</MenuItem>
+        </Submenu>
+        <Submenu name="2">
+          <template slot="title">
+            <Icon type="ios-keypad" :size="iconSize"></Icon>
+            <span class="layout-text">导航2</span>
+          </template>
+          <MenuItem name="2-1">选项 1</MenuItem>
+          <MenuItem name="2-2">选项 2</MenuItem>
+        </Submenu>
+        <Submenu name="3">
+          <template slot="title">
+            <Icon type="ios-analytics" :size="iconSize"></Icon>
+            <span class="layout-text">导航3</span>
+          </template>
+          <MenuItem name="3-1">选项 1</MenuItem>
+          <MenuItem name="3-2">选项 2</MenuItem>
+        </Submenu>
       </Menu>
+      <!--<Menu active-name="1" theme="dark" width="auto">-->
+        <!--<div class="layout-logo-left"></div>-->
+        <!--<MenuItem name="1">-->
+          <!--<Icon type="ios-navigate" :size="iconSize"></Icon>-->
+          <!--<router-link to="/dataTest" class="layout-text">选项 1</router-link>-->
+          <!--&lt;!&ndash;<span class="layout-text">选项 1</span>&ndash;&gt;-->
+        <!--</MenuItem>-->
+        <!--<MenuItem name="2">-->
+          <!--<Icon type="ios-keypad" :size="iconSize"></Icon>-->
+          <!--<span class="layout-text">选项 2</span>-->
+        <!--</MenuItem>-->
+        <!--<MenuItem name="3">-->
+          <!--<Icon type="ios-analytics" :size="iconSize"></Icon>-->
+          <!--<span class="layout-text">选项 3</span>-->
+        <!--</MenuItem>-->
+      <!--</Menu>-->
       </Col>
       <Col :span="spanRight">
       <div class="layout-header">

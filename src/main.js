@@ -7,7 +7,7 @@ import 'iview/dist/styles/iview.css';
 import fastclick from 'fastclick'
 import VueLazyload from 'vue-lazyload'
 
-
+import './common/sass/index.sass'
 
 
 Vue.use(iView);
