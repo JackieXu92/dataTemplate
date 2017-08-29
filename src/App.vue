@@ -1,50 +1,21 @@
 <template>
   <div id="app">
-    <div class="layout" :class="{'layout-hide-text': spanLeft < 5}">
-      <Row type="flex">
-        <!--<Col :span="spanLeft" class="layout-menu-left">-->
-          <layout-memu></layout-memu>
-        <!--</Col>-->
-        <Col :span="spanRight">
-
-        </Col>
-      </Row>
-    </div>
-    <router-view></router-view>
+    <layout-memu>
+      <router-view>
+      </router-view>
+    </layout-memu>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-  import LayoutMemu from './components/layout-memu/layout-memu.vue'
-
+  import LayoutMemu from './components/layout/layout-memu.vue'
   export default {
     components: {
-      LayoutMemu
-    },
-    name: 'app',
-    data () {
-      return {
-        spanLeft: 5,
-        spanRight: 19
-      }
-    },
-    computed: {
-      iconSize () {
-        return this.spanLeft === 5 ? 14 : 24;
-      }
-    },
-    methods: {
-//      toggleClick () {
-//        if (this.spanLeft === 5) {
-//          this.spanLeft = 2;
-//          this.spanRight = 22;
-//        } else {
-//          this.spanLeft = 5;
-//          this.spanRight = 19;
-//        }
-//      }
-    }
+         LayoutMemu
+       },
+    name: 'app'
   }
+
 </script>
 
 <style scoped lang="scss" rel="stylesheet/scss">
