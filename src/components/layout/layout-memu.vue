@@ -156,4 +156,7 @@
     position: relative;
     transition: width .2s ease-in-out;
   }
+  .ivu-menu-item a{
+    color: #fff;
+  }
 </style>
