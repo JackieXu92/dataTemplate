@@ -1,5 +1,74 @@
 {
   "memuData":{
-    "test":123
+    "user_name":"jackie",
+    "theme":"dark",
+    "active-name":"1-2",
+    "open-names":["1"],
+    "Submenu":[
+      {
+      "name":"1",
+      "Submenu_des":"导航一",
+      "icon":"ios-navigate",
+      "MenuItem":[
+        {
+        "link":"/dataTest",
+        "name":"1-1",
+        "MenuItem_des":"选项 1"
+        },
+        {
+        "link":"/dataTest",
+        "name":"1-2",
+        "MenuItem_des":"选项 2"
+        },
+        {
+          "link":"/dataTest",
+          "name":"1-3",
+          "MenuItem_des":"选项 3"
+        }
+      ]
+    },
+      {
+        "name":"2",
+        "Submenu_des":"导航二",
+        "MenuItem":[
+          {
+            "link":"/dataTest",
+            "name":"2-1",
+            "MenuItem_des":"选项 1"
+          },
+          {
+            "link":"/dataTest",
+            "name":"2-2",
+            "MenuItem_des":"选项 2"
+          },
+          {
+            "link":"/dataTest",
+            "name":"2-3",
+            "MenuItem_des":"选项 3"
+          }
+        ]
+      },
+      {
+        "name":"3",
+        "Submenu_des":"导航三",
+        "MenuItem":[
+          {
+            "link":"/dataTest",
+            "name":"3-1",
+            "MenuItem_des":"选项 1"
+          },
+          {
+            "link":"/dataTest",
+            "name":"3-2",
+            "MenuItem_des":"选项 2"
+          },
+          {
+            "link":"/dataTest",
+            "name":"3-3",
+            "MenuItem_des":"选项 3"
+          }
+        ]
+      }
+    ]
   }
 }

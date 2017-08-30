@@ -9,6 +9,7 @@
 
 <script type="text/ecmascript-6">
   import LayoutMemu from './components/layout/layout-memu.vue'
+
   export default {
     components: {
          LayoutMemu

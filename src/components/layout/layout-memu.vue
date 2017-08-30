@@ -2,43 +2,22 @@
   <div class="layout" :class="{'layout-hide-text': spanLeft < 5}">
     <Row type="flex">
       <Col :span="spanLeft" class="layout-menu-left">
-      <Menu active-name="1-2" theme="dark" width="auto" :open-names="['1']">
-        <div class="layout-logo-left"></div>
-        <Submenu name="1">
-          <template slot="title">
-            <Icon type="ios-navigate" :size="iconSize"></Icon>
-            <span class="layout-text">导航1</span>
-          </template>
-          <div class="layout-text">
-            <MenuItem name="1-1">
-              <router-link to="/dataTest">选项 1</router-link>
-            </MenuItem>
-            <MenuItem name="1-2">选项 2</MenuItem>
-            <MenuItem name="1-3">选项 3</MenuItem>
-          </div>
-
-        </Submenu>
-        <Submenu name="2">
-          <template slot="title">
-            <Icon type="ios-keypad" :size="iconSize"></Icon>
-            <span class="layout-text">导航2</span>
-          </template>
-          <div class="layout-text">
-            <MenuItem name="2-1">选项 1</MenuItem>
-            <MenuItem name="2-2">选项 2</MenuItem>
-          </div>
-        </Submenu>
-        <Submenu name="3">
-          <template slot="title">
-            <Icon type="ios-analytics" :size="iconSize"></Icon>
-            <span class="layout-text">导航3</span>
-          </template>
-          <div class="layout-text">
-            <MenuItem name="3-1">选项 1</MenuItem>
-            <MenuItem name="3-2">选项 2</MenuItem>
-          </div>
-        </Submenu>
-      </Menu>
+        <Menu active-name="1-2" theme="dark" width="auto" :open-names="['0']">
+          <div class="layout-logo-left"></div>
+          <Submenu name="1">
+            <template slot="title">
+              <Icon type="ios-navigate" :size="iconSize"></Icon>
+              <span class="layout-text">导航1</span>
+            </template>
+            <div class="layout-text">
+              <MenuItem name="1-1">
+                <router-link to="/dataTest">选项 1</router-link>
+              </MenuItem>
+              <MenuItem name="1-2">选项 2</MenuItem>
+              <MenuItem name="1-3">选项 3</MenuItem>
+            </div>
+          </Submenu>
+        </Menu>
       </Col>
       <Col :span="spanRight">
       <div class="layout-header">
@@ -67,12 +46,12 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Memu from 'iview/src/components/menu'
-  import Breadcrumb from  'iview/src/components/breadcrumb'
+//  import Memu from 'iview/src/components/menu'
+//  import Breadcrumb from  'iview/src/components/breadcrumb'
   export default {
     components:{
-      Memu,
-      Breadcrumb
+//      Memu,
+//      Breadcrumb
     },
     data () {
       return {
@@ -113,7 +92,7 @@
     padding: 10px 15px 0;
   }
   .layout-content{
-    min-height: 70%;
+    min-height: 200px;
     margin: 15px;
     overflow: hidden;
     background: #fff;
