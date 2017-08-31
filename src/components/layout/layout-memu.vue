@@ -13,32 +13,40 @@
               <MenuItem name="1-1">
                 <router-link to="/dataTest">选项 1</router-link>
               </MenuItem>
-              <MenuItem name="1-2">选项 2</MenuItem>
+              <MenuItem name="1-2">
+                <router-link to="/dataTest2">选项 2</router-link>
+              </MenuItem>
               <MenuItem name="1-3">选项 3</MenuItem>
             </div>
           </Submenu>
         </Menu>
       </Col>
       <Col :span="spanRight">
-      <div class="layout-header">
-        <Button type="text" @click="toggleClick">
-          <Icon type="navicon" size="32"></Icon>
-        </Button>
-      </div>
-      <div class="layout-breadcrumb">
-        <Breadcrumb>
-          <BreadcrumbItem href="/">首页</BreadcrumbItem>
-          <BreadcrumbItem href="#"></BreadcrumbItem>
-          <BreadcrumbItem replace></BreadcrumbItem>
-        </Breadcrumb>
-      </div>
-      <div class="layout-content">
-        <slot>
+      <div class="rightWrap">
+        <div class="layout-header">
+          <Button type="text" @click="toggleClick">
+            <Icon type="navicon" size="32"></Icon>
+          </Button>
+          <div class="user">
+            <Avatar icon="person" size="large" />
+          </div>
 
-        </slot>
-      </div>
-      <div class="layout-copy">
-        2011-2016 &copy; TalkingData
+        </div>
+        <div class="layout-breadcrumb">
+          <Breadcrumb>
+            <BreadcrumbItem href="/">首页</BreadcrumbItem>
+            <BreadcrumbItem href="#"></BreadcrumbItem>
+            <BreadcrumbItem replace></BreadcrumbItem>
+          </Breadcrumb>
+        </div>
+        <div class="layout-content">
+          <slot>
+
+          </slot>
+        </div>
+        <div class="layout-copy">
+          2011-2016 &copy; TalkingData
+        </div>
       </div>
       </Col>
     </Row>
@@ -92,7 +100,7 @@
     padding: 10px 15px 0;
   }
   .layout-content{
-    min-height: 200px;
+    min-height: 350px;
     margin: 15px;
     overflow: hidden;
     background: #fff;
@@ -111,6 +119,7 @@
     color: #9ea7b4;
   }
   .layout-menu-left{
+    height: 100%;
     background: #464c5b;
   }
   .layout-header{
@@ -132,10 +141,23 @@
     display: none;
   }
   .ivu-col{
-    position: relative;
+    height: 100%;
     transition: width .2s ease-in-out;
   }
   .ivu-menu-item a{
     color: #fff;
   }
+  .rightWrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .user{
+    height: 40px;
+    line-height: 40px;
+    float: right;
+    margin-right: 70px;
+    margin-top: 10px;
+  }
+
 </style>
